@@ -40,6 +40,23 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
   </style>
+<script defer src="https://www.pushcode.jp/dist/js/pushcode.js"></script>
+<script>
+window.PushCodeInit = function() {
+  try {
+    if (PushCode && PushCode.isSupport()) {
+      PushCode.init({ domainToken: '8506d2b50c9faa53aa2932fb5cc17b18d325ef8f5507519e97229dc03bb520ad', userid: '' });
+      PushCode.components.openSubscribeDialog();
+    }
+  }
+  catch (err) {
+    console.error(err);
+    if (PushCode) {
+      PushCode.sendError(err);
+    }
+  }
+};
+</script>
 
 </head>
 <body>
